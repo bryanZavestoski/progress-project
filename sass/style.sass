@@ -1,0 +1,223 @@
+$bg-color: #cbc5b7
+$dark-color: #232121
+$red-color: #802528
+$red-color-dark: #460d0f
+$blue-color: #003a5c
+$blue-color-dark: #001e2f
+
+@import "compass"
+@import "compass/reset"
+
+*
+  box-sizing: border-box
+body
+  background: url('../img/bg-overlay.png') $bg-color
+  margin: 0
+  padding: 0
+  font-family: "proxima-nova", sans-serif
+  color: #2d2a2a
+a
+  text-decoration: none
+p
+  margin-bottom: 1em
+.button, h1, h2
+  font-family: "bebas-neue", sans-serif
+.main
+  margin: 0 auto
+  padding: 0 20px
+  max-width: 1180px
+.hero
+  margin: 50px auto
+  display: block
+  width: 80%
+  max-width: 570px
+footer
+  background: #232121
+  color: white
+  padding: 0 20px
+h1
+  font-size: 24px
+  line-height: 1.125em
+  margin-bottom: 1em
+h2
+  font-size: 24px
+  margin-top: 10px
+p
+  font-size: 16px
+  line-height: 1.4em
+
+// Footer
+footer
+  padding: 20px 20px
+  position: relative
+  img
+    position: absolute
+    right: 20px
+    top: 35px
+    +filter(drop-shadow(0 -1px black))
+  p
+    margin-bottom: 0
+    text-shadow: 0 -1px black
+.address
+  margin-bottom: 10px
+  p
+    font-size: 14px
+    color: #939393
+.name
+  p
+    font-size: 12px
+    color: #595959
+    font-style: italic
+.share h1, h2
+  text-align: center
+.button
+  padding: 25px 20px 20px
+  line-height: 0
+  +border-radius(3px)
+  color: #d0d6cc
+  font-size: 20px
+  margin: 10px 0
+  text-align: center
+  &.red
+    background: $red-color
+    box-shadow: 0 5px $red-color-dark
+    &:hover
+      background: lighten($red-color, 5)
+    &:active
+      position: relative
+      top: 5px
+      background: darken($red-color, 5)
+      box-shadow: none
+  &.blue
+    background: $blue-color
+    box-shadow: 0 5px $blue-color-dark
+    display: inline-block
+    width: 48%
+    &:hover
+      background: lighten($blue-color, 5)
+    &:active
+      position: relative
+      top: 5px
+      background: darken($blue-color, 5)
+      box-shadow: none
+.social .button:first-of-type
+  margin-right: 4%
+.share
+  margin-bottom: 50px
+  margin-top: 30px
+  h1
+    font-size: 36px
+    margin-top: 30px
+    margin-bottom: 20px
+.content
+  margin-bottom: 40px
+.bags
+  background: url('../img/bags-bg.jpg') #161616
+  padding: 20px
+  h1
+    color: white
+    padding: 30px 20px 0
+    text-align: center
+    margin-bottom: 0
+  .column
+    display: block
+    width: 100%
+    margin: 20px auto
+  img
+    width: 100%
+    border: 8px solid white
+  .inner
+    max-width: 1180px
+    margin: 0 auto
+
+
+// Clearfix
+.clearfix:before, .clearfix:after
+  content: " "
+  display: table
+.clearfix:after
+  clear: both
+
+// Media Queries
+@media screen and (min-width: 700px)
+  h1
+    font-size: 40px
+  h2
+    font-size: 30px
+  p
+    font-size: 20px
+  .button
+    padding: 0
+    height: 60px
+    line-height: 1.9em
+    font-size: 36px
+  .hero
+    margin-bottom: 100px
+  .main
+    .left, .right
+      float: left
+    .left
+      width: 49.15%
+      margin-right: 10.17%
+    .right
+      width: 32.2%
+    .kickstarter
+      width: 55%
+      margin-right: 20%
+    .social
+      width: 100%
+  .content
+    margin-bottom: 30px
+  .share
+    margin-bottom: 120px
+  footer
+    .address, .name
+      position: absolute
+      top: 25px
+    .name
+      right: 20px
+      p
+        font-size: 14px
+        color: #939393
+        font-style: normal
+    .address
+      left: 20px
+    p.small
+      font-size: 12px
+      color: #595959
+      font-style: italic
+    img
+      position: static
+      display: block
+      margin: 0 auto
+  .kickstarter
+    float: right
+  .share
+    position: relative
+    h1
+      display: block
+      position: absolute
+      left: 47.8%
+      top: 60px
+      margin-top: 0
+  .bags
+    .column
+      float: left
+      margin-right: 2%
+    .one, .three, .four
+      width: 27.1%
+    .two
+      width: 12.4%
+      img
+        width: 100%
+        &:first-of-type
+          margin-bottom: 16%
+    .four
+      margin-right: 0
+
+@media screen and (min-width: 700px) and (max-width: 850px)
+  .main
+    .kickstarter
+      width: 75%
+    .right
+      width: 40%
